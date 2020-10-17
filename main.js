@@ -1,13 +1,10 @@
-let res = document.querySelector("#result");
-let equals = document.querySelector("#calc-equ"), // Equal button
-    theNum = "", // Current number
-    oldNum = "", // First number
-    resultNum = "0", // Result
-    operator; // Batman
-
-let holder = document.querySelector("#holder");
-
-let clickables = document.querySelectorAll('.calc-button');
+let res = document.querySelector("#result"),
+    holder = document.querySelector("#holder"),
+    theNum = "",
+    oldNum = "",
+    resultNum = "0",
+    operator,
+    clickables = document.querySelectorAll('.calc-button');
 
 clickables.forEach((elem) => {
     elem.addEventListener("click", function clickButton(button) {
@@ -41,18 +38,17 @@ clickables.forEach((elem) => {
 
             if(buttonValue === "." && res.value.includes(".")) return;
 
-            if (res.value == "") { // If a result was displayed, reset number
+            if (res.value == "") {
                 theNum = buttonValue;
-              }else if(l < 9) { // Otherwise, add digit to previous number (this is a string!)
+              }else if(l < 9) {
                 theNum += buttonValue;
               }
             
-              res.value = theNum; // Display current number
+              res.value = theNum;
         }
         if(id == "calc-num" || id == "calc-zero") Display();
 
         function Operator() {
-            // When: Operator is clicked. Pass number to oldNum and save operator
             if(id == "calc-opr"){
                 holder.value = res.value + " " + buttonValue + " ";
                 oldNum = res.value;
@@ -80,8 +76,7 @@ clickables.forEach((elem) => {
                 case "÷":
                   res.value= +oldNum / +theNum;
                   break;
-          
-                  // If equal is pressed without an operator, keep number and continue
+                
                 default:
                   resultNum = theNum;
               }
@@ -94,7 +89,7 @@ clickables.forEach((elem) => {
             if(buttonValue === "√") {
                 res.value = Math.sqrt(res.value);
                 holder.value = res.value;
-                lth = Math.sqrt(res.value).toString().length;
+                lth = res.value.toString().length;
                 if(lth > 9) {
                     res.style.fontSize = "50px";
                     holder.style.fontSize = "25px";
@@ -103,7 +98,7 @@ clickables.forEach((elem) => {
         }
         Sqrt();
 
-        let Clear = function() {
+        function Clear() {
             if(buttonValue == "AC") {
                 holder.value = res.value = "";  
                 res.style.fontSize = "100px";
