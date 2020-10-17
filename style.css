@@ -1,0 +1,94 @@
+
+:root {
+    --gradient: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    line-height: 1.25em;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #2e2e2e;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.calc-frame {
+    width: 500px;
+    height: 800px;
+    /* background-color: #000000; */
+}
+
+.calc-content {
+
+}
+
+.calc-holder {
+    width: 100%;
+    height: 50px;
+    border-radius: 35px 35px 0px 0px;
+    background-color: black;
+    outline: none;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: end;
+    padding-right: 15px;
+    cursor: default;
+}
+.calc-display {
+    width: 100%;
+    height: 125px;
+    background-color: black;
+    outline: none;
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: end;
+    cursor: default;
+}
+
+.calc-display::placeholder {
+    color: rgba(245, 245, 245, 0.65);
+}
+
+.calc-button {
+    width: 125px;
+    height: 125px;
+    font-size: 50px;
+    font-weight: bold;
+    border: 2px solid black;
+    outline: none;
+    /* box-shadow: 0 0 3pt 2pt black; */ /* onclick */
+}
+
+#calc-clr, #calc-sqrt, #calc-opr {              /* operator colors */
+    background-color: orange;
+}
+
+#calc-zero {
+    width: 250px;
+    border-radius: 0px 0px 0px 35px;
+}
+
+#calc-equ {
+    border-radius: 0px 0px 35px 0px;
+    background-color: #a33d01;
+}
+
