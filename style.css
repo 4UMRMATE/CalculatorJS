@@ -13,7 +13,7 @@ body {
 }
 
 .calc-frame {
-    width: 500px;
+    width: 480px;
     height: 800px;
     /* background-color: #000000; */
 }
@@ -29,7 +29,7 @@ body {
 }
 
 .calc-holder {
-    height: 50px;
+    height: 75px;
     border-radius: 35px 35px 0px 0px;
     font-size: 45px;
     padding-right: 15px;
@@ -41,8 +41,8 @@ body {
 }
 
 .calc-button {
-    width: 125px;
-    height: 125px;
+    width: 120px;
+    height: 120px;
     font-size: 50px;
     font-weight: bold;
     border: 2px solid black;
@@ -54,7 +54,7 @@ body {
 }
 
 #calc-zero {
-    width: 250px;
+    width: 240px;
     border-radius: 0px 0px 0px 35px;
 }
 
@@ -63,3 +63,7 @@ body {
     background-color: #a33d01;
 }
 
+.footer {
+    background: orange;
+    color: black;
+}

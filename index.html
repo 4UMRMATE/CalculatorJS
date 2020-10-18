@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html>
- <head>
+<head>
     <title>MS Calc.</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="calc.ico">
     <meta charset="UTF-8">
- </head>
- <body>
-
+</head>
+<body>
+  <div class="wrapper">
     <div class="calc-frame">
-        <table class="calc-content">
-            <tr>
-                <input class="calc-holder"  id="holder"   type="text" placeholder="0" disabled>
-                <input class="calc-display" id="result"   type="text" placeholder="0" disabled>
-            </tr>
-            <tr>
-                <input class="calc-button"  id="calc-clr" type="button" value="AC">
-                <input class="calc-button"  id="calc-clr" type="button" value="C">
-                <input class="calc-button"  id="calc-sqrt"type="button" value="√">
-                <input class="calc-button"  id="calc-opr" type="button" value="÷">
-            </tr>
-            <tr>
-                <input class="calc-button"  id="calc-num" type="button" value="7">
-                <input class="calc-button"  id="calc-num" type="button" value="8">
-                <input class="calc-button"  id="calc-num" type="button" value="9">
-                <input class="calc-button"  id="calc-opr" type="button" value="×">
-            </tr>
-            <tr>
-                <input class="calc-button"  id="calc-num" type="button" value="4">
-                <input class="calc-button"  id="calc-num" type="button" value="5">
-                <input class="calc-button"  id="calc-num" type="button" value="6">
-                <input class="calc-button"  id="calc-opr" type="button" value="-">
-            </tr>
-            <tr>
-                <input class="calc-button"  id="calc-num" type="button" value="1"> 
-                <input class="calc-button"  id="calc-num" type="button" value="2"> 
-                <input class="calc-button"  id="calc-num" type="button" value="3"> 
-                <input class="calc-button"  id="calc-opr" type="button" value="+"> 
-            </tr>
-            <tr>
-                <input class="calc-button"  id="calc-zero"type="button" value="0">
-                <input class="calc-button"  id="calc-num" type="button" value=".">
-                <input class="calc-button"  id="calc-equ" type="button" value="=">
-            </tr>
-        </ul>
+      <table class="calc-content">
+        <tr>
+          <input class="calc-holder"  id="holder"   type="text" placeholder="0" disabled>
+          <input class="calc-display" id="result"   type="text" placeholder="0" disabled>
+        </tr>
+        <tr>
+          <input class="calc-button"  id="calc-clr" type="button" value="AC">
+          <input class="calc-button"  id="calc-clr" type="button" value="C">
+          <input class="calc-button"  id="calc-sqrt"type="button" value="√">
+          <input class="calc-button"  id="calc-opr" type="button" value="÷">
+        </tr>
+        <tr>
+          <input class="calc-button"  id="calc-num" type="button" value="7">
+          <input class="calc-button"  id="calc-num" type="button" value="8">
+          <input class="calc-button"  id="calc-num" type="button" value="9">
+          <input class="calc-button"  id="calc-opr" type="button" value="×">
+        </tr>
+        <tr>
+          <input class="calc-button"  id="calc-num" type="button" value="4">
+          <input class="calc-button"  id="calc-num" type="button" value="5">
+          <input class="calc-button"  id="calc-num" type="button" value="6">
+          <input class="calc-button"  id="calc-opr" type="button" value="-">
+        </tr>
+        <tr>
+          <input class="calc-button"  id="calc-num" type="button" value="1"> 
+          <input class="calc-button"  id="calc-num" type="button" value="2"> 
+          <input class="calc-button"  id="calc-num" type="button" value="3"> 
+          <input class="calc-button"  id="calc-opr" type="button" value="+"> 
+        </tr>
+        <tr>
+          <input class="calc-button"  id="calc-zero"type="button" value="0">
+          <input class="calc-button"  id="calc-num" type="button" value=".">
+          <input class="calc-button"  id="calc-equ" type="button" value="=">
+        </tr>
+      </table>
     </div>
 
-    <script src="main.js"></script>
- </body>
+    <footer class="footer">
+      <ul>
+        <li>
+          <p>Author: Mate Sichinava</p>
+        </li>
+        <li>
+          <a href="mailto:sich.mate@gmail.com">sich.mate@gmail.com</a>
+        </li>
+      </ul>
+    </footer>
+  </div> 
+
+  <script src="main.js"></script>
+
+</body>
 </html>

@@ -13,6 +13,13 @@ clickables.forEach((elem) => {
             l = theNum.length,
             lth;
 
+        Animations();
+        Display();
+        Sqrt();
+        Operator();
+        Calculate();
+        Clear();
+
         function Animations() {    // button animations ( regular ones & for operator buttons)
             
             function DeleteOprStyle() {
@@ -38,8 +45,7 @@ clickables.forEach((elem) => {
                 elem.style.color = "white";
             } 
         }
-        Animations();
-
+        
         function Display() {
             if (id == "calc-num" || id == "calc-zero") {
                 if (buttonValue === "." && res.value.includes(".")) return;
@@ -53,8 +59,7 @@ clickables.forEach((elem) => {
                 res.value = theNum;
             }     
         }
-        Display();
-
+        
         function Operator() {
             if (id == "calc-opr"){
                 holder.value = res.value + " " + buttonValue + " ";
@@ -63,8 +68,7 @@ clickables.forEach((elem) => {
                 operator = buttonValue;
             }
         }
-        Operator();
-
+        
         function Calculate() {
             if (id == "calc-equ") {
                 switch (operator) {
@@ -91,14 +95,13 @@ clickables.forEach((elem) => {
                 holder.value = res.value;
             }   
         }
-        Calculate();
-
+        
         function Sqrt() {
             if (buttonValue === "√") {
                 if (res.value >= 0){
                     res.value = Math.sqrt(res.value);
                 } else {
-                    alert("negative number!")
+                    alert("Negative sqrt(number) not supported")
                 }
                 holder.value = res.value;
                 lth = res.value.toString().length;
@@ -107,8 +110,7 @@ clickables.forEach((elem) => {
                     holder.style.fontSize = "25px";
                 }
             }
-        }
-        Sqrt();
+        }    
 
         function Clear() {
             if (buttonValue == "AC") {
@@ -119,8 +121,7 @@ clickables.forEach((elem) => {
                 res.value = res.value.slice(0, -1);
                 theNum = theNum.slice(0, -1);
             }
-        }
-        Clear();
+        }    
 
     }); // clickButton()
 })      // clickables.forEach
