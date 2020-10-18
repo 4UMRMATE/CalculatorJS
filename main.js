@@ -15,22 +15,27 @@ clickables.forEach((elem) => {
 
         function Animations() {     // button animations ( regular ones & for operator buttons)
 
-            if(id !== "calc-opr") {
-                elem.style.transition = "0.15s"
-                elem.style.opacity = "0.5"
-                setTimeout(function(){
-                    elem.style.opacity = "1"
-                },150)
+            function DeleteOprStyle() {
                 let i = 0;
                 while(i < 4){
                     let oprStyle = document.querySelectorAll("#calc-opr")[i];
                     oprStyle.style = "";
                     ++i;
                 }
+            }
+
+            if(id !== "calc-opr") {
+                DeleteOprStyle();
+                elem.style.transition = "0.15s"
+                elem.style.opacity = "0.5"
+                setTimeout(function(){
+                    elem.style.opacity = "1"
+                },150)         
             }else {
+                DeleteOprStyle();
                 elem.style.backgroundColor = "#909090";
                 elem.style.color = "white";
-            }
+            } 
         }
         Animations();
 
@@ -87,7 +92,11 @@ clickables.forEach((elem) => {
 
         let Sqrt = function() {
             if(buttonValue === "√") {
-                res.value = Math.sqrt(res.value);
+                if(res.value >= 0){
+                    res.value = Math.sqrt(res.value);
+                }else {
+                    alert("negative number!")
+                }
                 holder.value = res.value;
                 lth = res.value.toString().length;
                 if(lth > 9) {
